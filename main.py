@@ -10,4 +10,4 @@ if __name__ == "__main__":
     ports_occupied_tcp, ports_free_tcp, ports_occupied_udp, ports_free_udp = scan_ports()
     generate_csv_report(ports_occupied_tcp, ports_free_tcp, ports_occupied_udp, ports_free_udp, REPORT_FOLDER, TARGET_IP)
 
-    print("CSV report generated successfully.")
+    print("Report generated successfully.")

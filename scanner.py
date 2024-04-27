@@ -1,8 +1,21 @@
 import socket
 import concurrent.futures
-from config import TARGET_IP, PORT_RANGE_START, PORT_RANGE_END
+from config import TARGET_IP, PORT_RANGE_START, PORT_RANGE_END, TIMEOUT
 
+def check_connectivity():
+    try:
+        socket.setdefaulttimeout(TIMEOUT)
+        socket.socket(socket.AF_INET, socket.SOCK_STREAM).connect((TARGET_IP, 80))
+        return True
+    except Exception as e:
+        print(f"Error connecting to {TARGET_IP}: {e}")
+        return False
+    
 def scan_ports():
+    if not check_connectivity():
+        print("Target host is unreachable. Exiting.")
+        return [], [], [], []
+
     ports_occupied_tcp = []
     ports_free_tcp = []
     ports_occupied_udp = []
