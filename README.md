@@ -1,43 +1,43 @@
-# Escáner de Puertos y Generador de Informes
+# Port Scanner and Report Generator
 
-Este proyecto consiste en un escáner de puertos TCP y UDP en una dirección IP especificada, junto con la generación de un informe CSV que detalla los puertos ocupados y libres, así como la información del servicio asociado a cada puerto.
+This project is a port scanner for TCP and UDP ports on a specified IP address, along with a CSV report generator detailing occupied and free ports, along with associated service information for each scanned port.
 
-## Funcionalidades
+## Features
 
-- **Escaneo de Puertos TCP y UDP:** Utiliza sockets para escanear puertos en un rango especificado y determinar cuáles están ocupados y cuáles están libres.
+- **TCP and UDP Port Scanning:** Utilizes sockets to scan ports in a specified range and determine which are occupied and which are free.
   
-- **Generación de Informe:** Crea un informe CSV detallado que incluye la dirección IP, el puerto, el protocolo, el estado (ocupado o libre) y el servicio asociado (si está disponible) para cada puerto escaneado.
+- **Report Generation:** Generates a detailed CSV report including IP address, port number, protocol, status (occupied or free), and associated service (if available) for each scanned port.
 
-## Requisitos
+## Requirements
 
-- Python 3.x instalado en tu sistema.
+- Python 3.x installed on your system.
   
-- Bibliotecas estándar de Python: `socket`, `concurrent.futures`, `os`, `csv`.
+- Python standard libraries: `socket`, `concurrent.futures`, `os`, `csv`.
 
-## Uso
+## Usage
 
-1. Clona este repositorio en tu máquina local.
+1. Clone this repository to your local machine.
    
-2. Asegúrate de tener los requisitos mencionados instalados.
+2. Make sure you have the mentioned requirements installed.
 
-3. Configura las variables necesarias en el archivo `config.py`, como la dirección IP de destino y el rango de puertos a escanear.
+3. Configure necessary variables in the `config.py` file, such as the target IP address and port range to scan.
 
-4. Ejecuta el script `main.py` para iniciar el escaneo de puertos y generar el informe CSV en la carpeta especificada.
+4. Run the `main.py` script to start port scanning and generate the CSV report in the specified folder.
 
-## Estructura de Archivos
+## File Structure
 
-- `main.py`: Punto de entrada del programa que inicia el escaneo de puertos y la generación del informe.
+- `main.py`: Entry point of the program that initiates port scanning and report generation.
   
-- `scanner.py`: Contiene las funciones para escanear puertos TCP y UDP de manera concurrente.
+- `scanner.py`: Contains functions for concurrent TCP and UDP port scanning.
   
-- `report_generator.py`: Define la función para generar el informe CSV basado en los resultados del escaneo.
+- `report_generator.py`: Defines the function to generate the CSV report based on scan results.
   
-- `config.py`: Archivo de configuración que contiene las variables como la dirección IP, el rango de puertos y la carpeta para el informe.
+- `config.py`: Configuration file containing variables like target IP, port range, and report folder.
 
-## Contribución
+## Contribution
 
-Si deseas contribuir a este proyecto, puedes enviar sugerencias, informar errores o enviar solicitudes de extracción (pull requests) para mejorar la funcionalidad o el código.
+If you wish to contribute to this project, you can send suggestions, report bugs, or submit pull requests to improve functionality or code.
 
-## Licencia
+## License
 
-Este proyecto está bajo la Licencia MIT. Para más detalles, consulta el archivo `LICENSE`.
+This project is licensed under the MIT License. For more details, see the `LICENSE` file.
